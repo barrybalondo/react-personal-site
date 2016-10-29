@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router';
 
 export default () => {
 
     return (
       <div className="header">
-        <h1>Barry Codes</h1>
+        <h1><Link to ="/">Barry Codes</Link></h1>
       </div>
       
     );
