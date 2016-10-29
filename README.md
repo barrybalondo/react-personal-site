@@ -5,7 +5,8 @@ things to do
   - make node server for posts
   - add pagination. maximum of 10 posts.
   - add updated by on projects
-  - add shodow to borders
+  - add shadow to borders
+  - add spinner loader to projects and posts
 
   - improve theme
   - make a homepage
