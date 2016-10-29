@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './header';
 import Menu from './menu';
+import Footer from './footer';
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
         <Header />
         <Menu />
         {this.props.children}
+        <Footer />
       </div>
     );
   }

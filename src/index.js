@@ -9,9 +9,9 @@ import reducers from './reducers';
 import { Router, Route, browserHistory } from 'react-router';
 import '../style/index.css';
 
-import Posts from './components/posts';
+import Posts from './containers/posts';
 import About from './components/about';
-import Projects from './components/projects';
+import Projects from './containers/projects';
 
 const createStoreWithMiddleware=applyMiddleware(ReduxPromise)(createStore);
 
