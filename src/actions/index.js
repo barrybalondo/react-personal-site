@@ -2,7 +2,7 @@ import axios from 'axios';
 import { FETCH_PROJECTS } from './types';
 
 
-const GIT_PROJECTS = 'https://api.github.com/users/barrybalondo/repos';
+const GIT_PROJECTS = 'https://api.github.com/users/barrybalondo/starred';
 
 export function fetchProjects() {
 

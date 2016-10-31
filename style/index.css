@@ -11,7 +11,6 @@ h1 {
   color: #ffffff;
   font-size: 50px;
   letter-spacing: 5px;
-  text-align: center;
 }
 
 h2 {
@@ -21,10 +20,18 @@ h2 {
   text-align: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
   background-color: #1e2228;
   padding: 45px;
   margin: 0;
+}
+
+.header a {
+  color: #ffffff;
 }
 
 p {
@@ -45,12 +52,11 @@ p {
   color: #000000;
 }
 
-a {
+.nav li a {
   color: #ffffff;
-  text-decoration: none;
 }
 
-a:hover {
+.nav li a:hover {
   color: #83878e;
 }
 
@@ -62,7 +68,8 @@ a:hover {
   text-align: center;
 }
 
-.nav ul {
+/* to remove hidden px */
+ul {
   padding-left:0;
 }
 
@@ -71,6 +78,7 @@ a:hover {
  
   display: block;
   border: solid;
+  border-radius: 3px;
   border-width: 1px;
   border-color: #c2c4c6;
   background-color: #ffffff;
@@ -92,17 +100,36 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/*
+
 .spinner {
   margin-top: 200px;
   margin-bottom: 400px;
   text-align: center;
+  color: #83878e;
 }
-*/
+
+
 
 .footer {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 120px;
+  
+}
+
+.footer a {
+  color: #83878e;
+}
+
+.footer p {
+  margin-bottom: -10px;
+  color: #83878e;
+}
+
+.list-inline li {
+  display: inline;
+  list-style-type: none;
+  font-size: 28px;
+  padding: 0 10px 0 10px;
 }
 
 @media only screen and (max-width: 768px) {

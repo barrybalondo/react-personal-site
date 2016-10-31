@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { fetchProjects } from '../actions/index'; 
-//import  Loader  from 'halogen/PulseLoader'
 import { connect } from 'react-redux';
-
+import FontAwesome from 'react-fontawesome';
 
 
 class Projects extends Component {
@@ -26,9 +25,8 @@ class Projects extends Component {
   render() {
 
     if(!this.props.projects)
-      return <div>Loading</div>;
-      //return <Loader className="spinner" color="#83878e" size="16px" margin="4px"/>; 
-    
+      return <div className="spinner"><FontAwesome name="circle-o-notch" size="4x" spin="true"/></div>;
+
     return (
 
       <div>
