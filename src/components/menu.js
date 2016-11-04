@@ -8,7 +8,7 @@ export default () => {
     <div className="nav">
       <ul>
         <li>
-          <Link to="/posts" >Posts</Link>
+          <Link to="/" >Posts</Link>
         </li>
         <li>
           <Link to="/projects" >Projects</Link>
