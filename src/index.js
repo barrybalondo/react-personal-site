@@ -9,7 +9,7 @@ import reducers from './reducers';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import '../style/index.css';
 
-import Posts from './containers/posts';
+import Posts from './containers/posts_index';
 import About from './components/about';
 import Projects from './containers/projects';
 

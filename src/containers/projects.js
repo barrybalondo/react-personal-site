@@ -29,7 +29,7 @@ class Projects extends Component {
     return (
 
       <div>
-        <div className="container">
+        <div className="container container-list">
           {this.props.projects.map(this.renderProjects)}
           <div className="container-content">
             <a href="https://github.com/barrybalondo?tab=repositories" target="_blank">
