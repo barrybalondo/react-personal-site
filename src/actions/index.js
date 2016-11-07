@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_PROJECTS, FETCH_POSTS } from './types';
+import { FETCH_PROJECTS, FETCH_POSTS, FETCH_POST } from './types';
 
 const URL_PROJECTS = 'https://api.github.com/users/barrybalondo/starred';
 const URL_POSTS = 'http://localhost:8080/api/posts';
@@ -25,5 +25,16 @@ export function fetchPosts() {
     payload: request
   };
 
+
+}
+
+export function fetchPost(id) {
+  const request = axios.get(`${URL_POSTS}/${id}`);
+
+  
+   return {
+    type: FETCH_POST,
+    payload: request
+  };
 
 }

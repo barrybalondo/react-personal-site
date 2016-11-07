@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { fetchProjects } from '../actions/index'; 
 import { connect } from 'react-redux';
 import FontAwesome from 'react-fontawesome';
+import _ from 'lodash/string'
 
 
 class Projects extends Component {
@@ -15,7 +16,12 @@ class Projects extends Component {
         <div className="container-content" key={project.name}>
           <h2><a href={project.html_url} target="_blank">{project.name}</a></h2>
           <h5><span className="short">Created on {project.created_at.slice(0,10)}</span></h5>
-          <p>{project.description}</p>
+          <p>
+              { _.truncate(project.description, {
+                'length': 180,
+                'separator': ' '
+              })}
+          </p>
           <hr className="long"/>
         </div>
     );

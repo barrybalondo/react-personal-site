@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { fetchPosts } from '../actions/index'; 
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 import hljs from 'highlight.js';
+import _ from 'lodash/string'
+
 
 // Refactor later
 const md = require('markdown-it')({
@@ -20,20 +23,38 @@ const md = require('markdown-it')({
 });
 
 
-class Posts extends Component {
+
+class PostsIndex extends Component {
+
 
   componentDidMount() {
     this.props.fetchPosts();
   }
 
+  
+
 
   renderProjects(post){
     return (
         <div className="container-content" key={post._id}>
-          <h2>{post.title}</h2>
+          
+          <h2><Link to={`/post/${post._id}`}>{post.title}</Link></h2>
+          
           <h5><span className="short">Created on {post.createdAt.slice(0,10)}</span></h5>
-          <div dangerouslySetInnerHTML={{__html: md.render(post.content) } } />
+
+            <p>
+              { _.truncate(post.content, {
+                'length': 180,
+                'separator': ' '
+              })}
+            </p>
+            
+          <br/>
+          <Link to={`/post/${post._id}`}>
+            <button className="myButton">READ MORE ></button>
+          </Link>        
           <hr className="long"/>
+         
         </div>
     );
   }
@@ -45,10 +66,13 @@ class Posts extends Component {
     if(!this.props.posts)
       return <div className="spinner"><FontAwesome name="circle-o-notch" size="4x" spin={true}/></div>;
 
+  //        {this.props.posts.map(this.renderProjects)}
+
+
     return (
 
       <div>
-        <div className="container">
+        <div className="container container-list">
           {this.props.posts.map(this.renderProjects)}
         </div>
       </div>
@@ -61,7 +85,7 @@ class Posts extends Component {
 
 
 function mapStateToProps({posts}){
-  return { posts };
+  return { posts: posts.all };
 }
 
-export default connect(mapStateToProps, { fetchPosts })(Posts);
+export default connect(mapStateToProps, { fetchPosts })(PostsIndex);

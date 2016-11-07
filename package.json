@@ -51,6 +51,7 @@
   "dependencies": {
     "axios": "^0.15.2",
     "highlight.js": "^9.8.0",
+    "lodash": "^4.16.6",
     "markdown-it": "^8.1.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

@@ -8,18 +8,17 @@ vim-hybrid theme by w0ng (https://github.com/w0ng/vim-hybrid)
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
+  padding: 1em;
   background: #1d1f21;
-  font-size: 15px;
-  text-align: left !important;
-  padding-left: 20px !important;
+  font-size: 14px;
 }
 
-/*selection color*/
+/*selection color
 .hljs::selection,
 .hljs span::selection {
   background: #373b41;
 }
+*/
 
 .hljs::-moz-selection,
 .hljs span::-moz-selection {

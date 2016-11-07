@@ -9,7 +9,8 @@ import reducers from './reducers';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import '../style/index.css';
 
-import Posts from './containers/posts_index';
+import PostsIndex from './containers/posts_index';
+import Post from './containers/post_show';
 import About from './components/about';
 import Projects from './containers/projects';
 
@@ -19,8 +20,8 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Router history={browserHistory}>
       <Route path="/" component={App}>  
-      <IndexRoute component={Posts} />
-        
+      <IndexRoute component={PostsIndex} />
+        <Route path="post/:id" component={Post}/>
         <Route path="about" component={About}/>
         <Route path="projects" component={Projects}/>
       </Route>
