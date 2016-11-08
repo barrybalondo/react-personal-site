@@ -13,7 +13,9 @@ export default () => {
         <li>
           <Link to="/projects" >Projects</Link>
         </li>
-        <li>Reads</li>
+        <li>
+          <Link to="/reads" >Reads</Link>
+        </li>
         <li>
           <Link to="/about" >About</Link>
         </li>
