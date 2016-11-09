@@ -28,18 +28,30 @@ h2 a:hover {
 }
 
 h5 {
+  position: relative;
+  margin-top: 20px;
+
   font-style: italic;
   font-size: 13px;
   letter-spacing: 1.5px;
-  color: #b3b3b3;
-  text-align: center;
-
-  width:100%;
-  border-bottom: 1px solid #f2f2f2;
-  line-height:0.1em;
-  margin: 45px 0 35px 0;
+  color: #D0D0D0;
+  line-height: 23px;
+  }
+  
+h5.author span {
+  background: #fff;
+  padding: 0 10px;
+  position: relative;
+  z-index: 5;
   
 }
+
+h5.author+p {
+  border-top: solid 1px #ececec;
+  padding-top: 40px;
+  margin-top: -38px;
+}
+
 
 a {
     text-decoration: none;
@@ -73,6 +85,11 @@ p {
   color: #000000;
 }
 
+.container-content h5 {
+  margin-top: 37px;
+  margin-bottom: 27px;
+}
+
 .nav li a {
   color: #ffffff;
 }
@@ -101,7 +118,7 @@ ul {
   border: solid;
   border-radius: 3px;
   border-width: 1px;
-  border-color: #c2c4c6;
+  border-color: #e3e3e3;
   background-color: #ffffff;
   margin: 55px auto 55px auto;
   padding: 45px 0 40px 0;
@@ -192,8 +209,29 @@ hr.long {
 	position:relative;
 	top:1px;
 }
+/*
+  .nav li {  
+    padding: 0 15px 0 15px;
+  }
 
-@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .container-content {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+*/
+
+/*
+@media screen and (min-device-width: 380px) and (max-device-width: 470px)  {
+
+
+  body{ background-color: black;}
+}
+
+@media screen and (min-width : 240px) and (max-width: 375px) {
 
   .nav li {  
     padding: 0 15px 0 15px;
@@ -207,4 +245,46 @@ hr.long {
     margin-left: 30px;
     margin-right: 30px;
   }
+
 }
+*/
+
+
+/* phones and lower */
+@media screen and (max-width:760px){
+    
+  .nav li {  
+    padding: 0 15px 0 15px;
+  }
+
+  .container {
+    max-width: 95%;
+  }
+
+  .container-content {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+
+}
+
+@media screen and (max-width:360px){
+      
+  .nav li {  
+    display: block;
+    padding: 12px;
+   
+  }
+
+  .container {
+    max-width: 95%;
+  }
+
+  .container-content {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+

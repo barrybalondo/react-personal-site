@@ -40,11 +40,11 @@ class PostsIndex extends Component {
           
           <h2><Link to={`/post/${post._id}`}>{post.title}</Link></h2>
           
-          <h5><span className="short">Created on {post.createdAt.slice(0,10)}</span></h5>
+          <h5 className="author"><span>Created on {post.createdAt.slice(0,10)}</span></h5>
 
             <p>
               { _.truncate(post.content, {
-                'length': 200,
+                'length': 220,
                 'separator': ' '
               })}
             </p>

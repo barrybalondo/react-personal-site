@@ -16,10 +16,10 @@ class ReadsIndex extends Component {
     return (
         <div className="container-content" key={read._id}>
           <h2><a href={read.url} target="_blank">{read.title}</a></h2>
-          <h5><span className="short">Created on {read.createdAt.slice(0,10)} by {read.author}</span></h5>
+          <h5 className="author"><span>Created on {read.createdAt.slice(0,10)} by {read.author}</span></h5>
           <p>
               { _.truncate(read.preview, {
-                'length': 200,
+                'length': 220,
                 'separator': ' '
               })}
           </p>

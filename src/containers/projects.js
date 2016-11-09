@@ -15,10 +15,10 @@ class Projects extends Component {
     return (
         <div className="container-content container-list" key={project.name}>
           <h2><a href={project.html_url} target="_blank">{project.name}</a></h2>
-          <h5><span className="short">Created on {project.created_at.slice(0,10)}</span></h5>
+          <h5 className="author"><span>Created on {project.created_at.slice(0,10)}</span></h5>
           <p>
               { _.truncate(project.description, {
-                'length': 200,
+                'length': 220,
                 'separator': ' '
               })}
           </p>
