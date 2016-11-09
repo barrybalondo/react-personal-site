@@ -44,7 +44,7 @@ class PostsIndex extends Component {
 
             <p>
               { _.truncate(post.content, {
-                'length': 180,
+                'length': 200,
                 'separator': ' '
               })}
             </p>

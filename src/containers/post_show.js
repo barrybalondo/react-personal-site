@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { fetchPost } from '../actions/index'; 
 import { connect } from 'react-redux';
 import hljs from 'highlight.js';
+import FontAwesome from 'react-fontawesome';
 
 // Refactor later
 const md = require('markdown-it')({
@@ -29,13 +30,13 @@ class PostShow extends Component {
   render(){
 
     if(!this.props.posts)
-      return <div></div>;
+      return <div className="spinner"><FontAwesome name="circle-o-notch" size="4x" spin={true}/></div>;
 
 
     return(
 
       <div className="container" >
-        <div className="container-content">
+        <div className="container-content title-show">
           <h2>{this.props.posts.title}</h2>
           <h5><span className="short">Created on {this.props.posts.createdAt.slice(0,10)}</span></h5>
           <div dangerouslySetInnerHTML={{__html: md.render(this.props.posts.content) } } />  

@@ -19,7 +19,7 @@ class ReadsIndex extends Component {
           <h5><span className="short">Created on {read.createdAt.slice(0,10)} by {read.author}</span></h5>
           <p>
               { _.truncate(read.preview, {
-                'length': 180,
+                'length': 200,
                 'separator': ' '
               })}
           </p>

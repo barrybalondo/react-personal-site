@@ -6,8 +6,9 @@ import {
   FETCH_READS 
 } from './types';
 
+
 const URL_PROJECTS = 'https://api.github.com/users/barrybalondo/starred';
-const URL_PERSONAL_API = 'http://localhost:8080/api/';
+const URL_PERSONAL_API = 'https://personal-api-barrycodes.herokuapp.com/api/';
 
 export function fetchProjects() {
 

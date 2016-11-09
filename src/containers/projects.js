@@ -13,15 +13,20 @@ class Projects extends Component {
 
   renderProjects(project){
     return (
-        <div className="container-content" key={project.name}>
+        <div className="container-content container-list" key={project.name}>
           <h2><a href={project.html_url} target="_blank">{project.name}</a></h2>
           <h5><span className="short">Created on {project.created_at.slice(0,10)}</span></h5>
           <p>
               { _.truncate(project.description, {
-                'length': 180,
+                'length': 200,
                 'separator': ' '
               })}
           </p>
+          <br/>
+          <a href={project.html_url} target="_blank">
+            <button className="myButton">GOTO GIT ></button>
+          </a>  
+
           <hr className="long"/>
         </div>
     );
@@ -35,11 +40,27 @@ class Projects extends Component {
     return (
 
       <div>
-        <div className="container container-list">
+        <div className="container">
+
+          <div className="container-content title-show">
+            <h2 className>My Projects!</h2>
+            <p>
+              These are a few of my projects. A random collection of sorts. Some projects are attempts 
+              to make a fully functional web app, while some are small apps that I built to try out features or frameworks.
+            </p>
+            <p>
+              All of my projects are a joy to me and I treasure all of them. My first website I made a year 
+              ago still resides in my repository. You can check some of my projects out below.
+            </p>
+            <br/>
+            <hr className="long"/>
+          </div>
+
           {this.props.projects.map(this.renderProjects)}
-          <div className="container-content">
+          <div className="container-content container-list">
+            <h2>Check my repo for more!</h2>
             <a href="https://github.com/barrybalondo?tab=repositories" target="_blank">
-              <button className="myButton">CHECK MORE ></button>
+              <button className="myButton">CHECK REPO ></button>
             </a>
           </div>
         </div>
