@@ -15,10 +15,11 @@ class Projects extends Component {
     return (
         <div className="container-content container-list" key={project.name}>
           <h2><a href={project.html_url} target="_blank">{project.name}</a></h2>
-          <h5 className="author"><span>Created on {project.created_at.slice(0,10)}</span></h5>
+          <h5 className="author"><span className="author-span">Created on {project.created_at.slice(0,10)}</span></h5>
+          <div className="fill" />
           <p>
               { _.truncate(project.description, {
-                'length': 220,
+                'length': 210,
                 'separator': ' '
               })}
           </p>
@@ -42,8 +43,9 @@ class Projects extends Component {
       <div>
         <div className="container">
 
-          <div className="container-content title-show">
+          <div className="container-show">
             <h2 className>My Projects!</h2>
+            <br/>
             <p>
               These are a few of my projects. A random collection of sorts. Some projects are attempts 
               to make a fully functional web app, while some are small apps that I built to try out features or frameworks.
@@ -70,8 +72,6 @@ class Projects extends Component {
     );
   }
   
-
-
 }
 
 function mapStateToProps({projects}){

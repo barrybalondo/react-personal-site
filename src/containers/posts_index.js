@@ -6,7 +6,6 @@ import FontAwesome from 'react-fontawesome';
 import hljs from 'highlight.js';
 import _ from 'lodash/string'
 
-
 // Refactor later
 const md = require('markdown-it')({
   html: true,
@@ -23,28 +22,22 @@ const md = require('markdown-it')({
 });
 
 
-
 class PostsIndex extends Component {
-
 
   componentDidMount() {
     this.props.fetchPosts();
   }
 
-  
-
-
   renderProjects(post){
     return (
         <div className="container-content" key={post._id}>
-          
-          <h2><Link to={`/post/${post._id}`}>{post.title}</Link></h2>
-          
-          <h5 className="author"><span>Created on {post.createdAt.slice(0,10)}</span></h5>
+          <h2><Link to={`/post/${post._id}`}>{post.title}</Link></h2>   
+          <h5 className="author"><span className="author-span">Created on {post.createdAt.slice(0,10)}</span></h5>
+          <div className="fill" />
 
             <p>
               { _.truncate(post.content, {
-                'length': 220,
+                'length': 210,
                 'separator': ' '
               })}
             </p>
@@ -53,8 +46,7 @@ class PostsIndex extends Component {
           <Link to={`/post/${post._id}`}>
             <button className="myButton">READ MORE ></button>
           </Link>        
-          <hr className="long"/>
-         
+          <hr className="long"/>       
         </div>
     );
   }
@@ -62,12 +54,8 @@ class PostsIndex extends Component {
 
   render() {
 
-
     if(!this.props.posts)
       return <div className="spinner"><FontAwesome name="circle-o-notch" size="4x" spin={true}/></div>;
-
-  //        {this.props.posts.map(this.renderProjects)}
-
 
     return (
 
@@ -80,9 +68,7 @@ class PostsIndex extends Component {
     );
   }
 
-
 }
-
 
 function mapStateToProps({posts}){
   return { posts: posts.all };

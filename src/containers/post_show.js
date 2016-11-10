@@ -25,21 +25,18 @@ class PostShow extends Component {
     this.props.fetchPost(this.props.params.id);
   }
 
-  
-
   render(){
 
     if(!this.props.posts)
       return <div className="spinner"><FontAwesome name="circle-o-notch" size="4x" spin={true}/></div>;
 
-
     return(
 
       <div className="container" >
-        <div className="container-content title-show">
-          <h2>{this.props.posts.title}</h2>
-          <h5 className="author"><span>Created on {this.props.posts.createdAt.slice(0,10)}</span></h5>
-          <div dangerouslySetInnerHTML={{__html: md.render(this.props.posts.content) } } />  
+        <div className="container-show">
+          <h2 className="title-show-content">{this.props.posts.title}</h2>
+          <h5 className="author-show"><span className="author-span">Created on {this.props.posts.createdAt.slice(0,10)}</span></h5>       
+          <div className="fill" dangerouslySetInnerHTML={{__html: md.render(this.props.posts.content) } } />  
           <hr className="long"/>
         </div>
       </div>

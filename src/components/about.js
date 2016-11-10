@@ -6,7 +6,7 @@ export default () => {
     return (
 
       <div className="container">
-        <div className="container-content">
+        <div className="container-show">
           <h2>Hello World!</h2>
           <p>
             As a kid I always played with legos. It was fun to build things from scratch. You always get that sense of accomplishment
@@ -21,7 +21,7 @@ export default () => {
           <hr className="long"/>
         </div>
 
-        <div className="container-content">
+        <div className="container-show">
           <h2>Contact</h2>
           <p>
             You can try to reach me by adding me in one of the social networks I provided.
