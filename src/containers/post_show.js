@@ -34,7 +34,7 @@ class PostShow extends Component {
 
       <div className="container" >
         <div className="container-show">
-          <h2 className="title-show-content">{this.props.posts.title}</h2>
+          <h2>{this.props.posts.title}</h2>
           <h5 className="author-show"><span className="author-span">Created on {this.props.posts.createdAt.slice(0,10)}</span></h5>       
           <div className="fill" dangerouslySetInnerHTML={{__html: md.render(this.props.posts.content) } } />  
           <hr className="long"/>

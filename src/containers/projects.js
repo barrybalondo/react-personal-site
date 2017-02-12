@@ -19,7 +19,7 @@ class Projects extends Component {
           <div className="fill" />
           <p>
               { _.truncate(project.description, {
-                'length': 210,
+                'length': 200,
                 'separator': ' '
               })}
           </p>

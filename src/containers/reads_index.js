@@ -20,7 +20,7 @@ class ReadsIndex extends Component {
           <div className="fill" />
           <p>
               { _.truncate(read.preview, {
-                'length': 210,
+                'length': 200,
                 'separator': ' '
               })}
           </p>

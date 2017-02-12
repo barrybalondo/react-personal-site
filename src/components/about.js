@@ -8,6 +8,7 @@ export default () => {
       <div className="container">
         <div className="container-show">
           <h2>Hello World!</h2>
+          <br/>
           <p>
             As a kid I always played with legos. It was fun to build things from scratch. You always get that sense of accomplishment
             when you finished something. It also gave you the possibilites to make weird creations with your imagination as the 

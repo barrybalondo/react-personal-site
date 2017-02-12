@@ -62,7 +62,7 @@ h5 {
 .author-show+.fill {
   border-top: solid 1px #ececec;
   padding-top: 40px;
-  margin-top: -35px;
+  margin-top: -37px;
 }
 
 a {
@@ -144,6 +144,11 @@ ul {
   margin-bottom: 25px;
 }
 
+.container-show .author-show {
+  margin-top: 37px;
+  margin-bottom: 25px;
+}
+
 .container-show {
   margin: 0 70px 0 70px;
 }
@@ -216,14 +221,14 @@ ul {
 }
 
 /* phones and lower */
-@media screen and (max-width:760px){
+@media screen and (max-width:1024px){
     
   .nav li {  
-    padding: 0 20px 0 20px;
+    padding: 0 35px 0 35px;
   }
 
   .container {
-    max-width: 95%;
+    max-width: 85%;
   }
 
   .container-content {
@@ -233,6 +238,28 @@ ul {
 
   .container-show {
     margin: 0 45px 0 45px;
+  }
+
+}
+
+
+@media screen and (max-width:760px){
+    
+  .nav li {  
+    padding: 0 15px 0 15px;
+  }
+
+  .container {
+    max-width: 95%;
+  }
+
+  .container-content {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+
+  .container-show {
+    margin: 0 40px 0 40px;
   }
 
 }
@@ -255,7 +282,29 @@ ul {
   }
 
   .container-show {
-    margin: 0 30px 0 30px;
+    margin: 0 25px 0 25px;
+  }
+}
+
+@media screen and (max-width:240px){
+      
+  .nav li {  
+    display: block;
+    padding: 12px;
+   
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .container-content {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .container-show {
+    margin: 0 25px 0 25px;
   }
 }
 

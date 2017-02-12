@@ -8,6 +8,7 @@ import reducers from './reducers';
 
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import '../style/index.css';
+import '../style/hybrid.css';
 
 import PostsIndex from './containers/posts_index';
 import Post from './containers/post_show';

@@ -3,24 +3,7 @@ import { fetchPosts } from '../actions/index';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import FontAwesome from 'react-fontawesome';
-import hljs from 'highlight.js';
 import _ from 'lodash/string'
-
-// Refactor later
-const md = require('markdown-it')({
-  html: true,
-  highlight: function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return '<pre class="hljs"><code>' +
-               hljs.highlight(lang, str, true).value +
-               '</code></pre>';
-      } catch (__) {}
-    }
-    return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
-  }
-});
-
 
 class PostsIndex extends Component {
 
@@ -37,7 +20,7 @@ class PostsIndex extends Component {
 
             <p>
               { _.truncate(post.content, {
-                'length': 210,
+                'length': 200,
                 'separator': ' '
               })}
             </p>
