@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { fetchPosts } from '../actions/index'; 
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
 import _ from 'lodash/string'
 
@@ -15,7 +16,7 @@ class PostsIndex extends Component {
     return (
         <div className="container-content" key={post._id}>
           <h2><Link to={`/post/${post._id}`}>{post.title}</Link></h2>   
-          <h5 className="author"><span className="author-span">Created on {post.createdAt.slice(0,10)}</span></h5>
+          <h5 className="author"><span className="author-span">Created on {moment(post.createdAt.slice(0,10)).format('MMM-DD-YYYY')}</span></h5>
           <div className="fill" />
 
             <p>

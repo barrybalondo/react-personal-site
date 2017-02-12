@@ -53,6 +53,7 @@
     "highlight.js": "^9.8.0",
     "lodash": "^4.16.6",
     "markdown-it": "^8.1.0",
+    "moments": "0.0.2",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-fontawesome": "^1.2.0",

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { fetchReads } from '../actions/index'; 
 import { connect } from 'react-redux';
+import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
 import _ from 'lodash/string'
 
@@ -16,7 +17,7 @@ class ReadsIndex extends Component {
     return (
         <div className="container-content" key={read._id}>
           <h2><a href={read.url} target="_blank">{read.title}</a></h2>
-          <h5 className="author"><span className="author-span">Created on {read.createdAt.slice(0,10)} by {read.author}</span></h5>
+          <h5 className="author"><span className="author-span">Created on {moment(read.createdAt).format('MMM-DD-YYYY')} by {read.author}</span></h5>
           <div className="fill" />
           <p>
               { _.truncate(read.preview, {

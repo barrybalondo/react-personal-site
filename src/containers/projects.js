@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { fetchProjects } from '../actions/index'; 
 import { connect } from 'react-redux';
+import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
 import _ from 'lodash/string'
 
@@ -15,7 +16,7 @@ class Projects extends Component {
     return (
         <div className="container-content container-list" key={project.name}>
           <h2><a href={project.html_url} target="_blank">{project.name}</a></h2>
-          <h5 className="author"><span className="author-span">Created on {project.created_at.slice(0,10)}</span></h5>
+          <h5 className="author"><span className="author-span">Created on {moment(project.created_at).format('MMM-DD-YYYY')}</span></h5>
           <div className="fill" />
           <p>
               { _.truncate(project.description, {

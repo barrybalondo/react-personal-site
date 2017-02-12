@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { fetchPost } from '../actions/index'; 
 import { connect } from 'react-redux';
+import moment from 'moment';
 import hljs from 'highlight.js';
 import FontAwesome from 'react-fontawesome';
 
@@ -35,7 +36,7 @@ class PostShow extends Component {
       <div className="container" >
         <div className="container-show">
           <h2>{this.props.posts.title}</h2>
-          <h5 className="author-show"><span className="author-span">Created on {this.props.posts.createdAt.slice(0,10)}</span></h5>       
+          <h5 className="author-show"><span className="author-span">Created on {moment(this.props.posts.createdAt).format('MMM-DD-YYYY')}</span></h5>       
           <div className="fill" dangerouslySetInnerHTML={{__html: md.render(this.props.posts.content) } } />  
           <hr className="long"/>
         </div>
